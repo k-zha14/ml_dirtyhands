@@ -2,6 +2,7 @@ import os
 from six.moves import urllib
 import pandas as pd
 import numpy as np
+from sklearn.base import BaseEstimator, TransformerMixin
 
 DOWNLOAD_ROOT = "https://raw.githubusercontent.com/ageron/handson-ml/master/"
 HOUSING_PATH = "datasets/housing"
@@ -30,5 +31,5 @@ def split_train_test(data, ratio):
     return data.iloc[test_indices], data.iloc[train_indices]
 
 
-if __name__ == '__main__':
-    fetch_housing_data()
+# if __name__ == '__main__':
+#     fetch_housing_data()
